@@ -1,15 +1,5 @@
-# Blank [Drupal 8](http://drupal.org/) custom module
+# Drupal 8 custom module boilerplate
 
-Plugin description.
+See the version for Drupal 7 [here](https://github.com/aramboyajyan/drupal7-boilerplate).
 
-### Installation
-
-Installation instructions go here.
-
-### Usage
-
-Usage instructions go here.
-
-<hr>
-
-By: [topsitemakers.com](http://www.topsitemakers.com).
+I'll update this later when I have time.
