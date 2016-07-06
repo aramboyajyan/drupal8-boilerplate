@@ -8,4 +8,16 @@
  * http://www.topsitemakers.com/
  */
 
-// 
+/**
+ * Implements hook_cron().
+ */
+function boilerplate_cron() {
+  // Check if previous execution was completed.
+  $lock = \Drupal::lock();
+  if ($lock->acquire('boilerplate_cron')) {
+    // Log a message. This is just to show that the example works.
+    \Drupal::logger('boilerplate_cron')->notice('Custom cron implementation executed.');
+    // Release the lock, so the next time our code can run.
+    $lock->release('boilerplate_cron');
+  }
+}
