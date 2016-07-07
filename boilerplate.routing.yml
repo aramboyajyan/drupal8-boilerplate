@@ -1,0 +1,7 @@
+boilerplate.page:
+  path: '/boilerplate'
+  defaults:
+    _controller: '\Drupal\boilerplate\Controller\BoilerplatePageController::showPage'
+    _title: 'Boilerplate title'
+  requirements:
+    _permission: 'access content'
