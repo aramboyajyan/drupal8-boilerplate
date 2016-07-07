@@ -1,7 +1,7 @@
 
 /**
  * @file
- * Contains the JS for our sample assets module.
+ * Custom JS for our boilerplate module.
  */
 
 (function (Drupal) {
