@@ -1,0 +1,13 @@
+boilerplate.custom_css:
+  version: 1.0
+  css:
+    theme:
+      css/boilerplate.custom.css: {}
+
+boilerplate.custom_js:
+  version: 1.0
+  js:
+    js/boilerplate.custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
