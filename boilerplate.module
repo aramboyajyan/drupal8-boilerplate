@@ -8,6 +8,11 @@
  * http://www.topsitemakers.com/
  */
 
+/**
+ * Constants.
+ */
+define('BOILERPLATE_SAMPLE_CONSTANT', 'sample value');
+
 // Load the helper functions.
 require_once dirname(__FILE__) . '/boilerplate.helpers.inc';
 
