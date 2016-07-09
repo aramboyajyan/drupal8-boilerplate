@@ -2,7 +2,7 @@
 
 /**
  * @file
- *   Drush integration for chosen.
+ * Drush integration.
  */
 
 /**
