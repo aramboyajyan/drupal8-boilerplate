@@ -21,3 +21,21 @@ function boilerplate_cron() {
     $lock->release('boilerplate_cron');
   }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function boilerplate_theme() {
+  return [
+    'boilerplate' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for our boilerplate template.
+ */
+function template_preprocess_boilerplate(&$variables) {
+  $variables['account'] = \Drupal::currentUser();
+}

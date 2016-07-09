@@ -13,3 +13,11 @@ boilerplate.form_page:
     _title: 'Boilerplate form page'
   requirements:
     _permission: 'access content'
+
+boilerplate.themed_page:
+  path: '/boilerplate-themed'
+  defaults:
+    _controller: '\Drupal\boilerplate\Controller\BoilerplatePageController::showThemedPage'
+    _title: 'Boilerplate themed page'
+  requirements:
+    _permission: 'access content'

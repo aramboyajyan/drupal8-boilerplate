@@ -22,4 +22,13 @@ class BoilerplatePageController extends ControllerBase {
     return $output;
   }
 
+  /**
+   * Returns build array for our sample themed page.
+   */
+  public function showThemedPage() {
+    return [
+      '#theme' => 'boilerplate',
+    ];
+  }
+
 }
