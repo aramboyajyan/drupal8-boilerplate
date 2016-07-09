@@ -8,6 +8,9 @@
  * http://www.topsitemakers.com/
  */
 
+// Load the helper functions.
+require_once dirname(__FILE__) . '/boilerplate.helpers.inc';
+
 /**
  * Implements hook_cron().
  */
