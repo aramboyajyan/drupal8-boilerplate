@@ -8,6 +8,8 @@
  * http://www.topsitemakers.com/
  */
 
+use Drupal\Core\Routing\RouteMatchInterface;
+
 /**
  * Constants.
  */
@@ -15,6 +17,22 @@ define('BOILERPLATE_SAMPLE_CONSTANT', 'sample value');
 
 // Load the helper functions.
 require_once dirname(__FILE__) . '/boilerplate.helpers.inc';
+
+/**
+ * Implements hook_help().
+ */
+function boilerplate_help_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'boilerplate.page':
+      $build = [
+        '#prefix' => '<p>',
+        '#markup' => t('This is the help text for our sample page.'),
+        '#suffix' => '</p>',
+      ];
+
+      return $build;
+  }
+}
 
 /**
  * Implements hook_cron().
