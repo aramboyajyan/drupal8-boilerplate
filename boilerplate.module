@@ -57,6 +57,18 @@ function boilerplate_block_view_alter(array &$build, BlockPluginInterface $block
 }
 
 /**
+ * Implements hook_preprocess_node().
+ */
+function boilerplate_preprocess_node(&$variables) {
+  // Alter variables passed to node templates.
+  switch ($variables['node']->getType()) {
+    case 'page':
+      $variables['boilerplate'] = REQUEST_TIME;
+      break;
+  }
+}
+
+/**
  * Implements hook_theme().
  */
 function boilerplate_theme() {
