@@ -9,6 +9,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Block\BlockPluginInterface;
 
 /**
  * Constants.
@@ -46,6 +47,13 @@ function boilerplate_cron() {
     // Release the lock, so the next time our code can run.
     $lock->release('boilerplate_cron');
   }
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function boilerplate_block_view_alter(array &$build, BlockPluginInterface $block) {
+  // Here you can alter any block in the system.
 }
 
 /**
