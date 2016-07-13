@@ -1,7 +1,15 @@
 boilerplate.page:
   path: '/boilerplate'
   defaults:
-    _controller: '\Drupal\boilerplate\Controller\BoilerplatePageController::showPage'
+    _controller: '\Drupal\boilerplate\Controller\BoilerplatePageController::showSimplePage'
+    _title: 'Boilerplate page'
+  requirements:
+    _permission: 'access content'
+
+boilerplate.arguments_page:
+  path: '/boilerplate-arguments/{arg1}/{arg2}'
+  defaults:
+    _controller: '\Drupal\boilerplate\Controller\BoilerplatePageController::showArgumentsPage'
     _title: 'Boilerplate page'
   requirements:
     _permission: 'access content'
