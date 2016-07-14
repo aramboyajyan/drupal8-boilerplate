@@ -8,6 +8,7 @@
  * http://www.topsitemakers.com/
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Block\BlockPluginInterface;
 
@@ -64,6 +65,17 @@ function boilerplate_preprocess_node(&$variables) {
   switch ($variables['node']->getType()) {
     case 'page':
       $variables['boilerplate'] = REQUEST_TIME;
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function hook_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    case 'target_form_id':
+      // Perform any form modifications here.
       break;
   }
 }
